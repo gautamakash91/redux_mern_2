@@ -4,7 +4,9 @@ import {
   Route
 } from "react-router-dom";
 import Login from "../../containers/loginCon";
-import Counter from "../../containers/counter/counterCont"
+import Counter from "../../containers/counter/counterCont";
+import Register from "../../containers/register/registerCon";
+
 import {
   withStyles
 } from "@material-ui/core";
@@ -31,6 +33,7 @@ class Routes extends Component {
           <main className={classes.content2}>
             <Route exact path="/" component={Login} />
             <Route path="/counterpath" component={Counter} />
+            <Route path="/register" component={Register} />
           </main>
         </div>
       </Router>

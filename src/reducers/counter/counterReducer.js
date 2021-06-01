@@ -11,7 +11,7 @@ let initial_state = {
 export default function reducer(state = initial_state, action) {
   switch (action.type) {
     case INCREASE_COUNTER:
-      return { ...state, count: initial_state.count++ }
+      return { ...state, count: state.count++ }
     case SET_USERS:
       return { ...state, users: action.payload }
     default:

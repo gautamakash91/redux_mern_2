@@ -17,11 +17,11 @@ export function setUsers(users) {
 }
 
 export function getUsers() {
-  return (dispatch)=>{
+  return (dispatch) => {
     return fetch("https://reqres.in/api/users?page=1")
-    .then(res => res.json())
-    .then((resJson) => {
-      dispatch(setUsers(resJson.data));
-    })
+      .then(res => res.json())
+      .then((resJson) => {
+        dispatch(setUsers(resJson.data));
+      })
   }
 }
